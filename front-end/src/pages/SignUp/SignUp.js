@@ -27,7 +27,7 @@ const SignUp = () => {
       >
         <Text style={styles.message}>Cadastre-se</Text>
       </Animatable.View>
-      <View sty></View>
+      <View style={styles.containerForm}></View>
     </View>
   );
 };
@@ -40,6 +40,14 @@ const styles = StyleSheet.create({
   containerHeader: {
     marginVertical: "8%",
     paddingStart: "8%",
+  },
+  containerForm: {
+    flex: 1,
+    backgroundColor: "#fff0e6",
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingStart: "8%",
+    paddingEnd: "8%",
   },
 });
 
