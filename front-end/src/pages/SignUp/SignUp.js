@@ -52,6 +52,9 @@ const SignUp = () => {
           secureTextEntry
           style={styles.input}
         />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Cadastrar</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -66,6 +69,11 @@ const styles = StyleSheet.create({
     marginVertical: "8%",
     paddingStart: "8%",
   },
+  message: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#F6F6F6",
+  },
   containerForm: {
     flex: 1,
     backgroundColor: "#fff0e6",
@@ -74,16 +82,29 @@ const styles = StyleSheet.create({
     paddingStart: "8%",
     paddingEnd: "8%",
   },
-  message: {
-    fontSize: 28,
-    fontWeight: "bold",
-    color: "#F6F6F6",
+  title: {
+    fontSize: 20,
+    marginTop: 28,
   },
   input: {
     borderBottomWidth: 1,
     height: 40,
     marginBottom: 12,
     fontSize: 16,
+  },
+  button: {
+    backgroundColor: "#10162f",
+    width: "100%",
+    borderRadius: 4,
+    paddingVertical: 8,
+    marginTop: 14,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#f6f6f6",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
 
