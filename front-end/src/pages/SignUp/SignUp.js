@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import * as Animatable from "react-native-animatable";
 
 const SignUp = () => {
@@ -27,7 +33,26 @@ const SignUp = () => {
       >
         <Text style={styles.message}>Cadastre-se</Text>
       </Animatable.View>
-      <View style={styles.containerForm}></View>
+      <View style={styles.containerForm}>
+        <Text style={styles.title}>Nome</Text>
+        <TextInput placeholder="Digite seu nome" style={styles.input} />
+
+        <Text style={styles.title}>Email</Text>
+        <TextInput placeholder="Digite um email" style={styles.input} />
+
+        <Text style={styles.title}>Senha</Text>
+        <TextInput
+          placeholder="Digite sua senha"
+          secureTextEntry
+          style={styles.input}
+        />
+        <Text style={styles.title}>Confirmação de senha</Text>
+        <TextInput
+          placeholder="confirme sua senha"
+          secureTextEntry
+          style={styles.input}
+        />
+      </View>
     </View>
   );
 };
@@ -53,6 +78,12 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: "bold",
     color: "#F6F6F6",
+  },
+  input: {
+    borderBottomWidth: 1,
+    height: 40,
+    marginBottom: 12,
+    fontSize: 16,
   },
 });
 
