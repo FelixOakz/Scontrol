@@ -1,22 +1,22 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import * as Animatable from "react-native-animatable";
 
 const SignUp = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confPassword, setConfPassword] = useState("");
+  //   const [name, setName] = useState("");
+  //   const [email, setEmail] = useState("");
+  //   const [password, setPassword] = useState("");
+  //   const [confPassword, setConfPassword] = useState("");
 
-  const validationPasswordMatch = (props) => {
-    const {
-      nativeEvent: { text },
-    } = props;
+  //   const validationPasswordMatch = (props) => {
+  //     const {
+  //       nativeEvent: { text },
+  //     } = props;
 
-    if (text !== password) {
-      alert("Senhas não são iguais!");
-    }
-  };
+  //     if (text !== password) {
+  //       alert("Senhas não são iguais!");
+  //     }
+  // };
 
   return (
     <View style={styles.container}>
