@@ -27,6 +27,7 @@ const SignUp = () => {
       >
         <Text style={styles.message}>Cadastre-se</Text>
       </Animatable.View>
+      <View sty></View>
     </View>
   );
 };
