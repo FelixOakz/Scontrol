@@ -1,0 +1,13 @@
+rnfunc tab no vs code>
+Zindex = css pra elemento ficar em camada
+
+
+----------
+colors:
+
+    black: 000000
+    oxford blue: 10162f
+    chysler blue: 3a10e5
+    gold: ffd500
+    tea green: eafdc6
+    linen beige: fff0e6
