@@ -49,6 +49,11 @@ const styles = StyleSheet.create({
     paddingStart: "8%",
     paddingEnd: "8%",
   },
+  message: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#F6F6F6",
+  },
 });
 
 export default SignUp;
