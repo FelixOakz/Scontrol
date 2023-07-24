@@ -13,10 +13,11 @@ const ApiPage = () => {
 
   const fetchData = async () => {
     try {
-      const apiUrl = 'https://2251-2804-1b1-4183-543d-c4c4-dc56-b9c4-9298.ngrok.io';
-      const response = await axios.get(apiUrl);
-      setData(response.data);
-      setLoading(false);
+        const apiUrl = 'https://2251-2804-1b1-4183-543d-c4c4-dc56-b9c4-9298.ngrok.io';
+        const response = await axios.get(apiUrl);
+        setData(response.data);
+        setLoading(false);
+        
     } catch (error) {
       setError(error.message);
       setLoading(false);
