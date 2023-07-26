@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import * as Animatable from "react-native-animatable";
 import { useNavigation } from "@react-navigation/native";
+import axios from "axios";
 
 const SignIn = () => {
   const navigation = useNavigation();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSignIn = async () => {
+    try {
+      const response = await axios.post("https://5e9f-2804-1b1-4183-543d-c4c4-dc56-b9c4-9298.ngrok.io", {
+        email: email,
+        password: password,
+      });
+      console.log(responde.data)
+      if (response.data.success) {
+        alert(response.data.message);
+        navigation.navigate("Home");
+
+      } else {
+        alert(response.data.message);
+
+      }
+    } catch (error) {
+      console.error("Error during sign-in", error);
+      alert("An error occurred during Sign-In");
+    }
+  };
 
   
 
@@ -19,17 +44,25 @@ const SignIn = () => {
       </Animatable.View>
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
+        
         <Text style={styles.title}>Email</Text>
-        <TextInput placeholder="Digite um email" style={styles.input} />
+        <TextInput
+          placeholder="Digite um email"
+          style={styles.input}
+          value={email}
+          onChangeText={(text) => setEmail(text)}
+        />
 
         <Text style={styles.title}>Senha</Text>
         <TextInput
           placeholder="Digite sua senha"
           secureTextEntry
           style={styles.input}
+          value={password}
+          onChangeText={(text) => setPassword(text)}
         />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleSignIn}>
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
 

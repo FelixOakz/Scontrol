@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>$control</Text>
+      <Text>Welcome to $control Home</Text>
       <StatusBar style="auto" />
     </View>
   );
