@@ -6,6 +6,8 @@ import { useNavigation } from "@react-navigation/native";
 const SignIn = () => {
   const navigation = useNavigation();
 
+  
+
   return (
     <View style={styles.container}>
       <Animatable.View
