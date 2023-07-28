@@ -12,13 +12,16 @@ const SignIn = () => {
 
   const handleSignIn = async () => {
     try {
-      const response = await axios.post("https://5e9f-2804-1b1-4183-543d-c4c4-dc56-b9c4-9298.ngrok.io", {
-        email: email,
-        password: password,
-      });
-      console.log(responde.data)
+      const response = await axios.post(
+        "https://d06e-2804-1b1-4183-543d-c4c4-dc56-b9c4-9298.ngrok-free.app/api/signIn",
+        {
+          email: email,
+          password: password,
+        },
+      );
       if (response.data.success) {
         alert(response.data.message);
+        console.log(response.data);
         navigation.navigate("Home");
 
       } else {
