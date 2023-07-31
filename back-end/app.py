@@ -19,18 +19,19 @@ def sign_in():
         data = request.json
         email = data['email']
         password = data['password']
-        print(data)
 
         if email == dummy_user["email"] and password == dummy_user["password"]:
             return jsonify({
                 "success": True,
                 "message": "Sign-In successful!"
             })
+            
         else:
             return jsonify({
                 "success": False,
                 "message": "Invalid credentials! Try again."
             })
+            
     except Exception as e:
         print("Error during sign-in", e)
         return jsonify({
